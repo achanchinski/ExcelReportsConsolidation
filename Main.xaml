@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1146.4,4342.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1146.4,4498.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -32,6 +32,7 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -85,9 +86,11 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="956.8,4277.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="956.8,4433.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -100,25 +103,25 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:DeleteFileX>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Cria o arquivo Daily Sales Report, adiciona um cabeçalho, adiciona os reports individuais, formata o arquivo, gera um pivot table e gráfico" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="894.4,4000.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" sap2010:Annotation.AnnotationText="Cria o arquivo Daily Sales Report, adiciona um cabeçalho, adiciona os reports individuais, formata o arquivo, gera um pivot table e gráfico" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="894.4,4156.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="860.8,3883.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="860.8,4039.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Sales Results Excel File" sap:VirtualizedContainerService.HintSize="798.4,3771.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="Sales Results\Sales Results-2024-01-05.xlsx" UseTemplate="True" WorkbookPath="[&quot;Sales Results\Sales Results-&quot; + DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot;.xlsx&quot;]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Sales Results Excel File" sap:VirtualizedContainerService.HintSize="798.4,3927.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="Sales Results\Sales Results-2024-01-05.xlsx" UseTemplate="True" WorkbookPath="[&quot;Sales Results\Sales Results-&quot; + DateTime.Now.ToString(&quot;yyyy-MM-dd&quot;) + &quot;.xlsx&quot;]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="SalesResults" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="764.8,3478.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="764.8,3634.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -139,7 +142,7 @@
                         <ueab:GeneralFormat />
                       </ueab:FormatRangeX.Format>
                     </ueab:FormatRangeX>
-                    <ui:ForEachFileX DisplayName="For Each Excel Report File in Folder" Folder="D:\Adriano\Meus Arquivos\UiPath\Projetos\UipathAcademy\ExcelReportsConsolidation\Daily Reports" sap:VirtualizedContainerService.HintSize="702.4,1861.6" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+                    <ui:ForEachFileX DisplayName="For Each Excel Report File in Folder" Folder="D:\Adriano\Meus Arquivos\UiPath\Projetos\UipathAcademy\ExcelReportsConsolidation\Daily Reports" sap:VirtualizedContainerService.HintSize="702.4,2017.6" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
                       <ui:ForEachFileX.Body>
                         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                           <ActivityAction.Argument1>
@@ -148,25 +151,30 @@
                           <ActivityAction.Argument2>
                             <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                           </ActivityAction.Argument2>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="668.8,1596.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="668.8,1752.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="606.4,1484.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" TemplatePath="Daily Reports\Coffee Shop 1.xlsx" UseTemplate="True" WorkbookPath="[CurrentFile.FullName]">
+                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="606.4,1640.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" TemplatePath="Daily Reports\Coffee Shop 1.xlsx" UseTemplate="True" WorkbookPath="[CurrentFile.FullName]">
                               <ueab:ExcelApplicationCard.Body>
                                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="SourceExcel" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572.8,1192" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572.8,1348" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <If Condition="[SourceExcel.SelectedSheet.Name IsNot &quot;Sheet1&quot;]" DisplayName="If Sheet has a diferent name" sap:VirtualizedContainerService.HintSize="510.4,826.4" sap2010:WorkflowViewState.IdRef="If_1">
+                                    <If sap2010:Annotation.AnnotationText="Compara o nome da planilha com &quot;Sheet1&quot; &#xD;&#xA;Se Resultado for igual a 0 as strings são iquais, caso contrario o nome está incorreto e será trocado.&#xD;&#xA;&#xD;&#xA;Obs.: A verificação utilizando IsNot esta falhando, ou seja: &#xD;&#xA;SourceExcel.SelectedSheet.Name IsNot &quot;Sheet1&quot; retorna true e os nomes são iguais.&#xD;&#xA;&#xD;&#xA;Instrução que tambem funciona:&#xD;&#xA;String.Compare (SourceExcel.SelectedSheet.Name, &quot;Sheet1&quot;) &lt;&gt; 0" Condition="[SourceExcel.SelectedSheet.Name &lt;&gt; &quot;Sheet1&quot;]" DisplayName="If Sheet has a diferent name" sap:VirtualizedContainerService.HintSize="510.4,982.4" sap2010:WorkflowViewState.IdRef="If_1">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
                                         <Sequence sap:VirtualizedContainerService.HintSize="476.8,411.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -175,7 +183,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ueab:RenameSheetX DisplayName="Rename Source Excel Sheet Name" From="[SourceExcel.SelectedSheet]" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="RenameSheetX_1" To="Sheet1" />
-                                          <ui:LogMessage DisplayName="Log Message - Nome da Tabela Alterado" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[String.Format(&quot;O arquivo {1} contém o nome da tabela inesperado. A tabela foi renomeada.&quot;,CurrentFile.Name)]" />
+                                          <ui:LogMessage DisplayName="Log Message - Nome da Tabela Alterado" sap:VirtualizedContainerService.HintSize="433.6,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[String.Format(&quot;O arquivo {0} contém o nome da planilha inesperado. A planilha foi renomeada.&quot;,CurrentFile.Name)]" />
                                         </Sequence>
                                       </If.Then>
                                       <If.Else>
@@ -185,7 +193,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:LogMessage DisplayName="Log Message - Nome da Tabela Correto" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[String.Format(&quot;O arquivo {1} pois nome da tabela correto.&quot;,CurrentFile.Name)]" />
+                                          <ui:LogMessage DisplayName="Log Message - Nome da Tabela Correto" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[String.Format(&quot;O arquivo {0} possui nome da planilha correto.&quot;,CurrentFile.Name)]" />
                                         </Sequence>
                                       </If.Else>
                                     </If>
